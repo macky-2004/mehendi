@@ -1,0 +1,519 @@
+/* ============================================
+   RESPONSIVE STYLES
+   Mehendi Artist — Luxury Brand Website
+   ============================================ */
+
+/* ==========================================
+   TABLET (max-width: 1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 100px 0;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .about-grid {
+    gap: 48px;
+  }
+
+  .footer {
+    padding: 48px 0 0;
+  }
+
+  .footer__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer__brand {
+    grid-column: 2 / 5;
+  }
+
+  .footer__group:nth-of-type(1) {
+    grid-column: 5 / 7;
+  }
+
+  .footer__group:nth-of-type(2) {
+    grid-column: 7 / 9;
+  }
+
+  .footer__group:nth-of-type(3) {
+    grid-column: 9 / 12;
+  }
+
+  .footer__desc {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .footer__heading {
+    margin-bottom: 14px;
+    font-size: 0.7rem;
+  }
+
+  .footer__links a {
+    font-size: 0.82rem;
+  }
+
+  .footer__links li {
+    margin-bottom: 6px;
+  }
+
+  .footer__contact-item {
+    margin-bottom: 6px;
+  }
+
+  .footer__contact-label {
+    margin-bottom: 1px;
+    font-size: 0.7rem;
+  }
+
+  .footer__contact-value {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .footer__bottom {
+    padding: 20px 0 16px;
+    gap: 24px;
+  }
+
+  .footer__credit-logo {
+    height: 58px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+
+  .footer__credit {
+    gap: 8px;
+  }
+
+  .footer__credit-text {
+    font-size: 0.7rem;
+  }
+
+  .footer__credit-name {
+    font-size: 0.75rem;
+  }
+
+  .footer__social {
+    gap: 14px;
+  }
+
+  .footer__social-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-detail {
+    gap: 48px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-story {
+    gap: 40px;
+  }
+
+  .philosophy {
+    gap: 40px;
+  }
+
+  .contact-grid {
+    gap: 40px;
+  }
+
+  .stats {
+    gap: 24px;
+  }
+}
+
+/* ==========================================
+   MOBILE (max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 80px 0;
+    --container-padding: 0 20px;
+  }
+
+  /* Navigation */
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 360px;
+    height: 100vh;
+    background: var(--color-bg);
+    padding: 100px 40px 40px;
+    transition: var(--transition-medium);
+    z-index: 1000;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .nav--open {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .nav__link {
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+    position: relative;
+  }
+
+  /* Overlay when menu open */
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-medium);
+  }
+
+  .nav-overlay--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 500px;
+    max-height: 700px;
+  }
+
+  .hero__title {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Page Hero */
+  .page-hero {
+    height: 40vh;
+    min-height: 320px;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .service-card__image {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* About Grid */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Gallery Grid */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 80px 0;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 48px 0 0;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .footer__brand,
+  .footer__group {
+    grid-column: unset;
+  }
+
+  .footer__group:last-child {
+    border-bottom: none;
+  }
+
+  /* Footer Accordion */
+  .footer__group {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .footer__accordion-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-bottom: 0;
+  }
+
+  .footer__accordion-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .footer__accordion-icon::before,
+  .footer__accordion-icon::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 1px;
+    transition: transform 0.3s ease;
+  }
+
+  .footer__accordion-icon::before {
+    width: 12px;
+    height: 1.5px;
+    top: 5px;
+    left: 0;
+  }
+
+  .footer__accordion-icon::after {
+    width: 1.5px;
+    height: 12px;
+    top: 0;
+    left: 5px;
+  }
+
+  .footer__accordion-btn--open .footer__accordion-icon {
+    transform: rotate(45deg);
+  }
+
+  .footer__accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0;
+  }
+
+  .footer__accordion-content--open {
+    max-height: 400px;
+    padding: 0 0 20px;
+  }
+
+  .footer__links li:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    padding: 36px 0 28px;
+  }
+
+  .footer__bottom > :first-child {
+    margin-right: 0;
+  }
+
+  .footer__credit {
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .footer__social {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer__social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer__desc {
+    max-width: 100%;
+  }
+
+  .footer__credit-logo {
+    height: 36px;
+    max-width: 130px;
+  }
+
+  /* About Story */
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Stats */
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 48px 0;
+  }
+
+  .stats__item-number {
+    font-size: 2rem;
+  }
+
+  .stats__item-label {
+    font-size: 0.75rem;
+  }
+
+  /* Philosophy */
+  .philosophy {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Service Detail */
+  .service-detail {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .service-detail--reverse .service-detail__image {
+    order: 1;
+  }
+
+  .service-detail--reverse .service-detail__body {
+    order: 2;
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* Gallery Filters */
+  .gallery-filters {
+    gap: 16px;
+  }
+
+  .gallery-filters__btn {
+    font-size: 0.75rem;
+  }
+
+  /* Lightbox */
+  .lightbox__close {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE (max-width: 480px)
+   ========================================== */
+@media (max-width: 480px) {
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .cta__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta__actions .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pricing-card {
+    padding: 32px 24px;
+  }
+
+  .section__header {
+    margin-bottom: 40px;
+  }
+
+  .about-grid__content .heading-secondary,
+  .about-story__content .heading-secondary {
+    font-size: 1.6rem;
+  }
+
+  .header {
+    padding: 14px 0;
+  }
+}
+
+/* ==========================================
+   LARGE SCREEN (min-width: 1400px)
+   ========================================== */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .services-grid {
+    gap: 40px;
+  }
+
+  .gallery-grid {
+    gap: 20px;
+  }
+}
